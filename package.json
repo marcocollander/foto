@@ -1,0 +1,43 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm-run-all test",
+    "init-project": "npm install && npm-run-all init:*",
+    "init:dirs": "mkdirp sass css vendor images pages js",
+    "init:files": "touch README.md index.html sass/main.scss js/app.js",
+    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore.",
+    "test": "npm-run-all test:*",
+    "test:html": "globstar nu-html-checker *.html",
+    "test:js": "eslint js/",
+    "test:scss": "stylelint sass/",
+    "watch": "npm-run-all build -p watch:*",
+    "watch:browsersync": "browser-sync start --server --files \"css/*.css\" \"*.html\" \"js/*.js\"",
+    "watch:sass": "sass --watch sass/main.scss css/main.css"
+  },
+  "keywords": [],
+  "author": "Zenon Marek Raubuć",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "browser-sync": "^2.27.3",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.24.0",
+    "globstar": "^1.0.0",
+    "mkdirp": "^1.0.4",
+    "npm-run-all": "^4.1.5",
+    "nu-html-checker": "^0.1.0",
+    "postcss": "^8.3.5",
+    "postcss-cli": "^8.3.1",
+    "prettier": "2.3.2",
+    "sass": "^1.35.1",
+    "stylelint": "^13.13.1",
+    "stylelint-scss": "^3.20.1"
+  }
+}
