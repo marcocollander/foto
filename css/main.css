@@ -9,27 +9,23 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 nav {
-  animation: no-show .5s ease-out;
-
-  a {
-    padding: 10px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: 600;
-    color: #333;
-    transition: color 0.3s;
-
-    &:hover {
-      color: #347dcc;
-    }
-  }
-
-
+  animation: no-show 0.5s ease-out;
+}
+nav a {
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #347dcc;
 }
 
 .nav-only {
@@ -38,8 +34,7 @@ nav {
   bottom: 0;
   background: #ddd;
   width: 100%;
-  animation: show .5s ease-out;
-
+  animation: show 0.5s ease-out;
 }
 
 .nav {
@@ -47,17 +42,15 @@ nav {
   line-height: 60px;
   background-color: #ddd;
   text-align: center;
-
-  &-items {
-    display: none;
-
-    &--vertical {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-  }
+}
+.nav-items {
+  display: none;
+}
+.nav-items--vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
@@ -75,46 +68,38 @@ nav {
   background: none;
   border: none;
   cursor: pointer;
-
-  .fa-bars {
-    animation: no-show .5s ease-out;
-  }
-
-  .fa-times {
-    animation: rotate .5s ease-out;
-  }
+}
+.burger-icon .fa-bars {
+  animation: no-show 0.5s ease-out;
+}
+.burger-icon .fa-times {
+  animation: rotate 0.5s ease-out;
 }
 
 @keyframes show {
   from {
     width: 0;
   }
-
   to {
     width: 100%;
   }
 }
-
 @keyframes no-show {
   from {
     width: 0;
   }
-
   to {
     width: 100%;
   }
 }
-
 @keyframes rotate {
   from {
     transform: rotate(0);
   }
-
   to {
     transform: rotate(360deg);
   }
 }
-
 @media (min-width: 768px) {
   .burger-icon {
     display: none;
@@ -122,10 +107,10 @@ nav {
 
   .nav-items {
     display: block;
-
-    a {
-      padding: 0 30px;
-    }
+  }
+  .nav-items a {
+    padding: 0 30px;
   }
 }
 
+/*# sourceMappingURL=main.css.map */
