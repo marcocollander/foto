@@ -5,12 +5,66 @@
 }
 
 :root {
-  font-size: 10px;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background-color: #45a297;;
 }
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.hero-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hero-text {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  h1{
+    margin-bottom: 5px;
+    text-shadow: 3px 3px 5px #000;
+    font-size: 30px;
+    color: #ddd;
+    letter-spacing: 1px;
+  }
+
+  span {
+    text-transform: uppercase;
+    color: #347dcc;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+.section-title {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+section {
+  scroll-margin-top: 80px;
+  color: white;
+}
+
+// *********** NawIGATION *************
 
 nav {
   animation: no-show .5s ease-out;
@@ -21,31 +75,28 @@ nav {
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: 600;
-    color: #333;
+    color: #fff;
     transition: color 0.3s;
 
     &:hover {
       color: #347dcc;
     }
   }
-
-
 }
 
 .nav-only {
   position: absolute;
   top: 0;
   bottom: 0;
-  background: #ddd;
+  background: #45a297;
   width: 100%;
-  animation: show .5s ease-out;
-
+  animation: show 0.3s ease-out;
+  z-index: 1;
 }
 
 .nav {
   height: 60px;
   line-height: 60px;
-  background-color: #ddd;
   text-align: center;
 
   &-items {
@@ -60,11 +111,6 @@ nav {
   }
 }
 
-.wrapper {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1200px;
-}
 
 .burger-icon {
   display: block;
@@ -77,11 +123,13 @@ nav {
   cursor: pointer;
 
   .fa-bars {
-    animation: no-show .5s ease-out;
+    animation: no-show 0.3s ease-out;
+    color: #444;
   }
 
   .fa-times {
-    animation: rotate .5s ease-out;
+    animation: rotate 0.3s ease-out;
+    color: #444;
   }
 }
 
@@ -115,6 +163,102 @@ nav {
   }
 }
 
+// *********** Header **************
+
+.header {
+  position: relative;
+  background-image: url("../images/page-first/hero-minor.jpg");
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+}
+
+// ********* STYLE FOR MAIN *************
+
+main {
+  margin: 60px 0;
+}
+
+//  section about us
+
+.about-me {
+  color: #9b1515;
+}
+
+.about-me-info {
+  margin-bottom: 10px;
+  padding: 0 20px;
+  font-size: 16px;
+  text-align: center;
+  color: #eee;
+
+  span {
+    color: #9b1515;
+  }
+}
+
+// section fotos
+
+.fotos {
+  margin: 60px auto;
+}
+
+.foto {
+  position: relative;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid white;
+
+  .hero-bg {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.foto h3 {
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.foto:hover h3 {
+  transform: scale(2.5);
+}
+
+.first-foto {
+  background-image: url("../images/page-first/rodos-small.jpg");
+}
+
+.second-foto {
+  background-image: url("../images/page-first/praga-small.jpg");
+}
+
+.third-foto {
+  background-image: url("../images/page-first/hiszpania-small.jpg");
+}
+
+.fourth-foto {
+  background-image: url("../images/page-first/kreta-small.jpg");
+}
+
+.five-foto {
+  background-image: url("../images/page-first/miedzyzdroje-small.jpg");
+}
+
+.six-foto {
+  background-image: url("../images/page-first/miedzywodzie-small.jpg");
+}
+
+.seven-foto {
+  background-image: url("../images/page-first/karpacz-small.jpg");
+}
+
+.eight-foto {
+  background-image: url("../images/page-first/szklarska.jpg");
+}
+
+// *********** STYLES FOR MEDIA *****************
+
 @media (min-width: 768px) {
   .burger-icon {
     display: none;
@@ -125,6 +269,87 @@ nav {
 
     a {
       padding: 0 30px;
+      color: #333;
+    }
+  }
+
+  .header {
+    height: 400px;
+    background-image: url('../images/page-first/hero-major.jpg');
+  }
+
+  .hero-text {
+    h1 {
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .foto {
+    h3 {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .fotos-box {
+    font-size: 0;
+  }
+
+  .foto {
+    display: inline-block;
+    width: 50%;
+
+    &:hover h3 {
+      transform: scale(1.8);
+    }
+  }
+
+  .first-foto {
+    background-image: url("../images/page-first/rodos.jpg");
+  }
+
+  .second-foto {
+    background-image: url("../images/page-first/praga.jpg");
+  }
+
+  .third-foto {
+    background-image: url("../images/page-first/hiszpania-big.jpg");
+  }
+
+  .fourth-foto {
+    background-image: url("../images/page-first/kreta-big.jpg");
+  }
+
+  .five-foto {
+    background-image: url("../images/page-first/miedzyzdroje-big.jpg");
+  }
+
+  .six-foto {
+    background-image: url("../images/page-first/miedzywodzie-big.jpg");
+  }
+
+  .seven-foto {
+    background-image: url("../images/page-first/karpacz-big.jpg");
+  }
+
+  .eight-foto {
+    background-image: url("../images/page-first/szklarska-big.jpg");
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-text {
+    h1 {
+      font-size: 42px;
+    }
+
+    p {
+      font-size: 20px;
     }
   }
 }
