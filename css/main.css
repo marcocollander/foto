@@ -153,6 +153,10 @@ main {
   color: #2980b9;
 }
 
+.section-title {
+  font-size: 18px;
+}
+
 .about-me-info {
   margin-bottom: 10px;
   padding: 0 20px;
@@ -180,11 +184,9 @@ main {
 .foto h3 {
   text-transform: uppercase;
   text-align: center;
-  transition: 0.3s;
-}
-
-.foto:hover h3 {
-  transform: scale(2.5);
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: normal;
 }
 
 .first-foto {
@@ -229,7 +231,6 @@ main {
   }
   .nav-items a {
     padding: 0 30px;
-    color: #333;
   }
 
   .header {
@@ -244,11 +245,20 @@ main {
     font-size: 18px;
   }
 
+  .section-title {
+    font-size: 20px;
+  }
+
   .foto h3 {
-    font-size: 24px;
+    font-size: 28px;
+    letter-spacing: 1px;
   }
 }
 @media (min-width: 992px) {
+  .section-title {
+    font-size: 24px;
+  }
+
   .fotos-box {
     font-size: 0;
   }
@@ -257,8 +267,9 @@ main {
     display: inline-block;
     width: 50%;
   }
-  .foto:hover h3 {
-    transform: scale(1.8);
+  .foto h3 {
+    font-size: 36px;
+    letter-spacing: 2px;
   }
 
   .first-foto {
