@@ -5,7 +5,6 @@
 }
 
 :root {
-  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
@@ -66,58 +65,44 @@ section {
 
 // *********** NAVIGATION *************
 
-nav {
-  a {
-    padding: 10px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: 600;
-    color: #bdc3c7;
-    transition: color 0.3s;
-
-    &:hover {
-      color: #347dcc;
-    }
-  }
-}
-
 .nav {
-  height: 60px;
-  line-height: 60px;
   text-align: center;
+  animation: no-show 0.3s ease-in;
 
-  &-items {
+  &--vertical {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #34495e;
+    animation: show 0.3s ease-in;
+    z-index: 1;
+  }
+
+  &__hiden {
     display: none;
+  }
 
-    &--vertical {
-      margin-top: 15vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  &__show {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-      a {
-        margin-bottom: 5vh;
-      }
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #ecf0f1;
+      padding: 20px 0;
     }
   }
-}
-
-.nav-only {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  background: #34495e;
-  width: 100%;
-  animation: show 0.3s ease-out;
-  z-index: 1;
 }
 
 .burger-icon {
   display: block;
   margin-left: auto;
-  padding: 0 30px;
-  line-height: 60px;
+  padding: 20px;
   font-size: 30px;
   background: none;
   border: none;
@@ -128,8 +113,8 @@ nav {
   }
 
   .fa-times {
-    animation: rotate 0.5s ease-out;
     color: #bdc3c7;
+    animation: rotate 0.3s ease-in;
   }
 }
 
@@ -143,13 +128,23 @@ nav {
   }
 }
 
+@keyframes no-show {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 10vh;
+  }
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0);
   }
 
   to {
-    transform: rotate(360deg);
+    transform: rotate(405deg);
   }
 }
 
@@ -157,7 +152,7 @@ nav {
 
 .header {
   position: relative;
-  background-image: url("../images/page-first/hero-minor.jpg");
+  background-image: url("../images/page-first/hero-small.jpg");
   height: 50vh;
   background-size: cover;
   background-position: center;
@@ -251,22 +246,54 @@ main {
 
 // *********** STYLES FOR MEDIA *****************
 
+@media (min-width: 400px) {
+  .nav--vertical {
+    font-size: 20px;
+  }
+}
+
 @media (min-width: 768px) {
   .burger-icon {
     display: none;
   }
 
-  .nav-items {
+  .nav {
+    height: 10vh;
+    line-height: 10vh;
+  }
+
+  .nav__hiden {
     display: block;
 
     a {
       padding: 0 30px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #bdc3c7;
     }
+  }
+
+  .nav--vertical {
+    height: 10vh;
+    line-height: 10vh;
+
+    a {
+      padding: 0 30px;
+      color: #bdc3c7;
+    }
+
+  }
+
+  .nav__show {
+    margin-top: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 
   .header {
     height: 400px;
-    background-image: url('../images/page-first/hero-major.jpg');
+    background-image: url('../images/page-first/hero-big.jpg');
   }
 
   .hero-text {

@@ -1,8 +1,10 @@
+
 const nav = document.querySelector('nav');
+const divNav = document.querySelector('.nav div');
 const btn = document.querySelector('button');
 const icon = document.querySelector('i');
 const navItems = document.querySelector('div.nav-items');
-const links = document.querySelectorAll('.wrapper a');
+const links = document.querySelectorAll('nav a');
 
 changeClasses(btn);
 
@@ -13,7 +15,9 @@ for (const link of links) {
 function changeClasses(element) {
   element.addEventListener('click', () => {
     nav.classList.toggle('nav');
-    nav.classList.toggle('nav-only');
+    nav.classList.toggle('nav--vertical');
+    divNav.classList.toggle('nav__hiden');
+    divNav.classList.toggle('nav__show');
     icon.classList.toggle('fa-bars');
     icon.classList.toggle('fa-times');
     navItems.classList.toggle('nav-items');
