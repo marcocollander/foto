@@ -3,7 +3,7 @@ const nav = document.querySelector('nav');
 const divNav = document.querySelector('.nav div');
 const btn = document.querySelector('button');
 const icon = document.querySelector('i');
-const navItems = document.querySelector('div.nav-items');
+// const navItems = document.querySelector('div.nav-items');
 const links = document.querySelectorAll('nav a');
 
 changeClasses(btn);
@@ -20,7 +20,7 @@ function changeClasses(element) {
     divNav.classList.toggle('nav__show');
     icon.classList.toggle('fa-bars');
     icon.classList.toggle('fa-times');
-    navItems.classList.toggle('nav-items');
-    navItems.classList.toggle('nav-items--vertical');
+    // navItems.classList.toggle('nav-items');
+    // navItems.classList.toggle('nav-items--vertical');
   });
 }
