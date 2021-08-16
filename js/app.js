@@ -6,8 +6,8 @@ function classChange(element) {
   element.addEventListener('click', () => {
     icon.classList.toggle('fa-bars');
     icon.classList.toggle('fa-times');
-    navDiv.classList.toggle('nav__items');
-    navDiv.classList.toggle('nav__show');
+    navDiv.classList.toggle('animation');
+    navDiv.classList.add('no-animation');
   });
 }
 

@@ -14,17 +14,17 @@
 
 <body>
 <nav class="nav">
-    <button class="burger-icon"><i class="fas fa-bars"></i></button>
-    <div class="nav__items">
-      <a href="index.html">Start</a>
-      <a href="#about-me">O mnie</a>
-      <a href="#">Galeria</a>
-      <a href="https://blog.raubuc.net" target="_blank" rel="noopener">Blog</a>
-      <a href="#">Kontakt</a>
-    </div>
+  <button class="burger-icon"><i class="fas fa-bars"></i></button>
+  <div class="nav__show">
+    <a href="#">Start</a>
+    <a href="#about-me">O mnie</a>
+    <a href="#gallery">Galeria</a>
+    <a href="https://blog.raubuc.net" target="_blank" rel="noopener">Blog</a>
+    <a href="#contact">Kontakt</a>
+  </div>
 </nav>
 
-<header class="header">
+<header class="header" id="start">
   <div class="hero-bg"></div>
   <div class="hero-text">
     <h1>zdjęcia z<span> wczasów</span></h1>
@@ -35,17 +35,14 @@
 <main>
   <section class="about-me wrapper" id="about-me">
     <h2 class="section-title">o mnie</h2>
-    <p class="about-me-info">Zajmuję się projektowaniem
-      stron internetowych.</p>
-
     <p class="about-me-info">
-      Jeśli chcesz mieć taką stronę jak ta, gdzie możesz umieszczać zdjęcia z wczasów lub jakieś inne albo prowadzisz
-      niewielki biznes i chcesz, go zareklamować - <span>za niewielkie pieniądze</span> - w interencie to skontaktuj
-      się ze
-      mną. </p>
+      Zajmuję się projektowaniem stron internetowych. Jeśli chcesz mieć taką stronę jak ta, gdzie możesz umieszczać
+      zdjęcia z wczasów lub jakieś inne albo prowadzisz biznes i chcesz, go zareklamować w interencie to skontaktuj się
+      ze mną.
+    </p>
   </section>
 
-  <section class="fotos wrapper" id="products">
+  <section class="fotos wrapper" id="gallery">
     <div class="fotos-box">
       <div class="foto first-foto">
         <div class="hero-bg"></div>
@@ -102,14 +99,25 @@
           <h3>Szklarska Poręba</h3>
         </div>
       </div>
-
-
     </div>
+  </section>
+
+  <section class="contact wrapper" id="contact">
+    <h2 class="section-title">kontakt</h2>
+
+    <p><i class="fas fa-phone">&nbsp;&nbsp;&nbsp;+780 026 240</i></p>
+    <p><i class="fas fa-envelope">&nbsp;&nbsp;&nbsp;m.raubuc@wp.pl</i></p>
+
+    <h3>Adres</h3>
+    <p>ul. Kłośna 4</p>
+    <p>45-544 Wrocław</p>
   </section>
 
 </main>
 
-<footer></footer>
+<footer>
+  <p>&copy; 2021 FreeCoder</p>
+</footer>
 
 <script src="js/app.js"></script>
 </body>

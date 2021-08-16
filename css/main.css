@@ -62,20 +62,14 @@ body {
 }
 
 section {
-  scroll-margin-top: 80px;
   color: white;
-}
-
-.nav__items {
-  display: none;
 }
 
 .nav__show {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -300px;
   bottom: 0;
-  right: 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -109,6 +103,34 @@ section {
   color: #bdc3c7;
 }
 
+.no-animation {
+  animation: no-show 0.3s linear;
+}
+
+.animation {
+  animation: show 0.3s linear forwards;
+}
+
+@keyframes show {
+  from {
+    right: 100%;
+    left: -300px;
+  }
+  to {
+    right: 0;
+    left: 0;
+  }
+}
+@keyframes no-show {
+  from {
+    right: 0;
+    left: 0;
+  }
+  to {
+    right: 100%;
+    left: -300px;
+  }
+}
 .header {
   position: relative;
   background-image: url("../images/page-first/hero-small.jpg");
@@ -119,7 +141,7 @@ section {
 }
 
 main {
-  margin: 60px 0;
+  padding: 20px 0;
 }
 
 .about-me {
@@ -127,21 +149,19 @@ main {
 }
 
 .section-title {
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .about-me-info {
   margin-bottom: 10px;
   padding: 0 20px;
-  font-size: 16px;
+  font-size: 20px;
   color: #eee;
-}
-.about-me-info span {
-  color: #2980b9;
+  text-align: center;
 }
 
 .fotos {
-  margin: 60px auto;
+  margin: 30px auto;
 }
 
 .foto {
@@ -194,6 +214,31 @@ main {
   background-image: url("../images/page-first/szklarska.jpg");
 }
 
+.contact {
+  text-align: center;
+}
+
+.contact h3 {
+  margin: 20px 0 5px;
+  text-transform: uppercase;
+}
+
+footer {
+  padding: 30px 10px;
+  text-align: center;
+  background-color: #333;
+  color: #bdc3c7;
+}
+
+@media (min-width: 412px) {
+  .nav a {
+    font-size: 24px;
+  }
+
+  .foto h3 {
+    font-size: 28px;
+  }
+}
 @media (min-width: 768px) {
   .nav {
     font-size: 20px;
@@ -205,19 +250,18 @@ main {
     display: none;
   }
 
-  .nav__show {
-    height: 6vh;
-    flex-direction: row;
+  .no-animation {
+    animation: none;
   }
 
-  .nav__items {
-    display: flex;
-    justify-content: space-evenly;
+  .animation {
+    animation: none;
   }
-  .nav__items a {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #bdc3c7;
+
+  .nav__show {
+    position: static;
+    flex-direction: row;
+    height: 3vh;
   }
 
   .header {
