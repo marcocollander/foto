@@ -163,6 +163,7 @@ main {
 
 .about-me {
   color: #2980b9;
+  height: 50vh;
 }
 
 .section-title {
@@ -171,16 +172,16 @@ main {
 
 .about-me-info {
   margin-bottom: 10px;
-  padding: 0 20px;
-  font-size: 20px;
+  padding: 20px;
+  font-size: 16px;
   color: #eee;
-  text-align: center;
+  text-align: justify;
 }
 
 // section fotos
 
 .fotos {
-  margin: 30px auto;
+  margin: 0 auto;
 }
 
 .foto {
@@ -237,13 +238,41 @@ main {
 // section contact
 
 .contact {
-  text-align: center;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  h2 {
+    margin-top: 20px;
+    font-size: 22px;
+  }
 }
 
-.contact h3 {
-  margin: 20px 0 5px;
-  text-transform: uppercase;
+.email {
+  display: flex;
+  flex-direction: column;
+  &__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    p {
+      margin: 5px 20px;
+    }
+  }
 }
+
+.address {
+  margin-top: 50px;
+  p {
+    margin: 10px;
+    font-size: 18px;
+  }
+}
+
+
 
 // *************** FOOTER ***********
 

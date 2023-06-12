@@ -146,6 +146,7 @@ main {
 
 .about-me {
   color: #2980b9;
+  height: 50vh;
 }
 
 .section-title {
@@ -154,14 +155,14 @@ main {
 
 .about-me-info {
   margin-bottom: 10px;
-  padding: 0 20px;
-  font-size: 20px;
+  padding: 20px;
+  font-size: 16px;
   color: #eee;
-  text-align: center;
+  text-align: justify;
 }
 
 .fotos {
-  margin: 30px auto;
+  margin: 0 auto;
 }
 
 .foto {
@@ -215,12 +216,37 @@ main {
 }
 
 .contact {
-  text-align: center;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contact h2 {
+  margin-top: 20px;
+  font-size: 22px;
 }
 
-.contact h3 {
-  margin: 20px 0 5px;
-  text-transform: uppercase;
+.email {
+  display: flex;
+  flex-direction: column;
+}
+.email__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.email__item p {
+  margin: 5px 20px;
+}
+
+.address {
+  margin-top: 50px;
+}
+.address p {
+  margin: 10px;
+  font-size: 18px;
 }
 
 footer {
